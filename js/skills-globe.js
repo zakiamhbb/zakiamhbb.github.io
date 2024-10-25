@@ -3,6 +3,10 @@ let isUserInteracting = false;
 let rotationSpeed = 0.001;
 let lastMouseX, lastMouseY;
 
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
 const skills = [
     'Python', 'JavaScript', 'Machine Learning', 'Deep Learning', 'NLP',
     'Computer Vision', 'Data Analysis', 'TensorFlow', 'PyTorch', 'SQL',

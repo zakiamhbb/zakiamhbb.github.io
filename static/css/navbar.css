@@ -1,0 +1,65 @@
+.navbar {
+    background: transparent;
+    transition: all 0.3s ease;
+    padding: 1vh 2vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 3vh;
+    color: var(--background-color) !important;
+    text-shadow: 0.1vh 0.1vh 0.2vh rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: var(--background-color) !important;
+    font-size: 1.5vh;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-0.2vh);
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar-transparent {
+    background: transparent !important;
+}
+
+.navbar-colored {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Override Bootstrap's default background */
+.navbar {
+    background: transparent;
+}
+
+/* Ensure other styles don't interfere */
+.navbar-dark {
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 2.5vh;
+    }
+
+    .nav-link {
+        font-size: 1.3vh;
+    }
+}
+
+
+

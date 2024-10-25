@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zakia Mahbub Abdullah - AI/ML Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="/">ZMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <video id="background-video" muted>
+            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="hero-content">
+                        <h1 class="display-1 fw-bold slide-in-left">Zakia Mahbub Abdullah</h1>
+                        <div class="typing-text-container">
+                            <h3 class="mb-4 slide-in-left typing-text"></h3>
+                        </div>
+                        <a href="#about" class="btn btn-primary btn-lg mt-3 slide-in-left">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-4 col-sm-6 col-8">
+                    <img src="{{ url_for('static', filename='images/mypict.jpeg') }}" alt="Zakia Mahbub Abdullah" class="img-fluid rounded-circle shadow-lg">
+                </div>
+            </div>
+            <h2 class="text-center mb-5 fade-in">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p class="lead mb-4 fade-in">Programmer with extensive experience in national and international competitions. I am an enthusiastic, self-motivated, hard-working, and adaptable person with expertise in AI/ML engineering and data science.</p>
+                    <p class="fade-in">I specialize in developing innovative machine learning solutions, focusing on natural language processing, computer vision, and recommendation systems. My goal is to transform complex data into intelligent, actionable solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Education</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card h-100 education-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{{ url_for('static', filename='images/telkom.png') }}" alt="Telkom University Logo" class="me-3 education-logo">
+                                <h3 class="card-title">Telkom University</h3>
+                            </div>
+                            <h4>Bachelor Degree in Computer Engineering</h4>
+                            <p class="text-muted">Aug 2021 - Aug 2023</p>
+                            <p><strong>GPA: 3.86/4.00</strong></p>
+                            <ul class="education-list">
+                                <li>Participant of Cross Culture Program with Universiti Teknologi Petronas, 2021.</li>
+                                <li>Participant of Virtual Short Course in Future Technology with Universiti Kuala Lumpur and Mapua University.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 fade-in">
+                    <div class="card h-100 education-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{{ url_for('static', filename='images/ugm.png') }}" alt="Gadjah Mada University Logo" class="me-3 education-logo">
+                                <h3 class="card-title">Gadjah Mada University</h3>
+                            </div>
+                            <h4>Associate Degree in Instrumentation Technology</h4>
+                            <p class="text-muted">Aug 2018 - Aug 2021</p>
+                            <p><strong>GPA: 3.75/4.00</strong></p>
+                            <ul class="education-list">
+                                <li>Participant of Digital Image Processing Virtual Exchange Program with Asia University.</li>
+                                <li>Participant of Artificial Intelligence Summer Course Program with Asia University.</li>
+                                <li>Participant of FinTech Summer Course Program with Asia University.</li>
+                                <li>Recipient of Sakura Science Student Exchange Scholarship, Kitakyushu, Japan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fade-in">Work Experience</h2>
+            <div class="timeline-container">
+                <!-- First 2 cards will always be visible -->
+                <div class="timeline-item fade-in">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>AI ML Development & Testing</h3>
+                            <h4>Sinas Mas Land - BSD, Tangerang</h4>
+                            <p class="text-muted">Nov 2023 - Mar 2024</p>
+                            <ul>
+                                <li>Designed, developed, and optimized machine learning algorithms, focusing on NLP, computer vision, and recommendation systems.</li>
+                                <li>Executed thorough testing, including unit testing and performance testing, to ensure the accuracy, reliability, and scalability of AI/ML models.</li>
+                                <li>Deployed machine learning models into production environments, ensuring seamless integration with existing systems.</li>
+                                <li>Collaborated with cross-functional teams, communicated findings effectively, and continuously improved models for optimal performance and relevance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Transformation - Innovation Developer</h3>
+                            <h4>Sinar Mas Land - BSD, Tangerang</h4>
+                            <p class="text-muted">Jul 2022 - Oct 2023</p>
+                            <ul>
+                                <li>Partnered with other departments in creating web and apps innovation using internal tools Outsystems.</li>
+                                <li>Provided design development of projects involving application development, migrations, and additions to existing applications.</li>
+                                <li>Demonstrated advanced proficiency in seamlessly integrating cutting-edge technologies, including computer vision, machine learning, and IoT, into web and mobile applications.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hidden cards -->
+                <div class="hidden-cards" style="display: none;">
+                    <div class="timeline-item fade-in">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Data Analyst</h3>
+                                <h4>PT. Zona Edukasi Nusantara - Jakarta</h4>
+                                <p class="text-muted">Feb 2022 - Jul 2022</p>
+                                <ul>
+                                    <li>Responsible for compiling and maintaining a database</li>
+                                    <li>Performed data mining and data cleansing for analysis</li>
+                                    <li>Analyzed and interpreted data for reports</li>
+                                    <li>Explored new data sets and analyzed techniques</li>
+                                    <li>Interpreted and visualized data into dashboards</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Programmer</h3>
+                                <h4>Lembaga Ilmu Pengetahuan Indonesia (LIPI) - Bandung</h4>
+                                <p class="text-muted">Feb 2021 - Apr 2021</p>
+                                <ul>
+                                    <li>Developed Artificial Intelligence (AI) projects using object detection on Autonomous Vehicles with computer vision using the YOLO detection method.</li>
+                                    <li>Developed object detection on autonomous vehicles for automated driving</li>
+                                    <li>Developed object detection accuracy of up to 96.7%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>IT Engineer</h3>
+                                <h4>PT. Multi Fabrindo (Medco Group) - Jakarta</h4>
+                                <p class="text-muted">Dec 2019 - Feb 2020</p>
+                                <ul>
+                                    <li>Developed the air quality system project for employee safety with an accurate rate of 70%</li>
+                                    <li>Developed air quality system monitoring with the Internet of Things (IoT) using Node-Red</li>
+                                    <li>Developed air quality system monitoring using LabView</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toggle button -->
+                <div class="text-center mt-3">
+                    <button id="toggleExperience" class="btn btn-primary">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 scale-in">
+                    <div id="skills-globe"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2023 Zakia Mahbub Abdullah. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/skills-globe.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Simple typing effect without cursor
+            const typingText = document.querySelector('.typing-text');
+            const textToType = "AI/ML Engineer";
+            let i = 0;
+
+            function typeWriter() {
+                if (i < textToType.length) {
+                    typingText.textContent += textToType.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    setTimeout(() => {
+                        typingText.textContent = '';
+                        i = 0;
+                        typeWriter();
+                    }, 2000);
+                }
+            }
+
+            typeWriter();
+
+            // Video playback control
+            const video = document.getElementById('background-video');
+
+            video.addEventListener('ended', () => {
+                video.currentTime = 0;
+                video.play();
+            });
+
+            // Start playing the video
+            video.play();
+
+            // Navbar background change on scroll
+            const navbar = document.querySelector('.navbar');
+            const hero = document.querySelector('.hero');
+
+            function updateNavbar() {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('navbar-transparent');
+                    navbar.classList.add('navbar-colored');
+                } else {
+                    navbar.classList.add('navbar-transparent');
+                    navbar.classList.remove('navbar-colored');
+                }
+            }
+
+            // Initial call to set correct navbar style
+            updateNavbar();
+
+            // Update navbar style on scroll
+            window.addEventListener('scroll', updateNavbar);
+        });
+
+        // Add a cool background animation
+        const hero = document.querySelector('.hero');
+        let mouseX = 0;
+        let mouseY = 0;
+
+        hero.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX / window.innerWidth;
+            mouseY = e.clientY / window.innerHeight;
+            
+            gsap.to(hero, {
+                duration: 0.5,
+                backgroundPosition: `${mouseX * 50}% ${mouseY * 50}%`,
+                ease: 'power1.out'
+            });
+        });
+
+        // Running text animation
+        const runningText = document.querySelector('.running-text span');
+        runningText.addEventListener('animationiteration', () => {
+            runningText.style.animationDirection = 
+                runningText.style.animationDirection === 'reverse' ? 'normal' : 'reverse';
+        });
+    </script>
+    <!-- Add this script at the end of your index.html file, just before the closing </body> tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleExperience');
+            const hiddenCards = document.querySelector('.hidden-cards');
+            
+            toggleBtn.addEventListener('click', function() {
+                if (hiddenCards.style.display === 'none') {
+                    hiddenCards.style.display = 'block';
+                    toggleBtn.innerHTML = '<i class="bi bi-chevron-up"></i>';
+                } else {
+                    hiddenCards.style.display = 'none';
+                    toggleBtn.innerHTML = '<i class="bi bi-chevron-down"></i>';
+                }
+            });
+        });
+    </script>
+    <!-- Add these scripts before the closing </body> tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ url_for('static', filename='js/skills-globe.js') }}"></script>
+</body>
+</html>

@@ -6,24 +6,24 @@
     <title>Zakia Mahbub Abdullah - AI/ML Engineer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
         <div class="container">
-            <a class="navbar-brand" href="/">ZMA</a>
+            <a class="navbar-brand" href="index.html">ZMA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/achievements">Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -31,7 +31,7 @@
 
     <section id="home" class="hero">
         <video id="background-video" muted>
-            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+            <source src="images/background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-4 col-sm-6 col-8">
-                    <img src="{{ url_for('static', filename='images/mypict.jpeg') }}" alt="Zakia Mahbub Abdullah" class="img-fluid rounded-circle shadow-lg">
+                    <img src="images/mypict.jpeg" alt="Zakia Mahbub Abdullah" class="img-fluid rounded-circle shadow-lg">
                 </div>
             </div>
             <h2 class="text-center mb-5 fade-in">About Me</h2>
@@ -75,7 +75,7 @@
                     <div class="card h-100 education-card">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="{{ url_for('static', filename='images/telkom.png') }}" alt="Telkom University Logo" class="me-3 education-logo">
+                                <img src="images/telkom.png" alt="Telkom University Logo" class="me-3 education-logo">
                                 <h3 class="card-title">Telkom University</h3>
                             </div>
                             <h4>Bachelor Degree in Computer Engineering</h4>
@@ -92,7 +92,7 @@
                     <div class="card h-100 education-card">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="{{ url_for('static', filename='images/ugm.png') }}" alt="Gadjah Mada University Logo" class="me-3 education-logo">
+                                <img src="images/ugm.png" alt="Gadjah Mada University Logo" class="me-3 education-logo">
                                 <h3 class="card-title">Gadjah Mada University</h3>
                             </div>
                             <h4>Associate Degree in Instrumentation Technology</h4>
@@ -220,8 +220,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/skills-globe.js') }}"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/skills-globe.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const observer = new IntersectionObserver((entries) => {
@@ -334,6 +334,6 @@
     </script>
     <!-- Add these scripts before the closing </body> tag -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="{{ url_for('static', filename='js/skills-globe.js') }}"></script>
+    <script src="js/skills-globe.js"></script>
 </body>
 </html>

@@ -21,6 +21,10 @@ html, body {
     padding: 0;
 }
 
+section{
+    border-radius: 0;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;

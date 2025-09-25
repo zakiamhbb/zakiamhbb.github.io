@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Birthday Invitation - Choose Your Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Game Selection Page -->
+    <div id="game-selection" class="game-selection">
+        <header class="header">
+            <h1 class="title">Choose Your Challenge</h1>
+            <div class="magical-border"></div>
+        </header>
+
+        <main class="content">
+            <section class="selection-section">
+                <div class="challenge-intro">
+                    <h2>🎯 Prove Your Worth!</h2>
+                    <p>Choose your challenge to earn the birthday invitation!</p>
+                </div>
+
+                <div class="games-container">
+                    <div class="game-card duel-card" data-game="duel">
+                        <div class="game-icon">⚔️</div>
+                        <h3>Magical Duel Arena</h3>
+                        <p>Battle fearsome creatures in epic combat!</p>
+                        <div class="game-features">
+                            <span class="feature">🐉 Fight Dragons</span>
+                            <span class="feature">🧙 Cast Spells</span>
+                            <span class="feature">⚡ Action Combat</span>
+                        </div>
+                        <button class="game-button" data-target="duel-game.html">
+                            <span>Enter Battle!</span>
+                        </button>
+                    </div>
+
+                    <div class="game-card quiz-card" data-game="quiz">
+                        <div class="game-icon">🧠</div>
+                        <h3>Magical Knowledge Test</h3>
+                        <p>Answer Harry Potter trivia questions!</p>
+                        <div class="game-features">
+                            <span class="feature">🦉 5 Questions</span>
+                            <span class="feature">📚 HP Trivia</span>
+                            <span class="feature">🎓 Test Knowledge</span>
+                        </div>
+                        <button class="game-button" data-target="quiz-game.html">
+                            <span>Start Quiz!</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="skip-section">
+                    <button id="skip-challenges" class="skip-button">
+                        Skip All Challenges
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Game selection page specific script
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameCards = document.querySelectorAll('.game-card');
+            const gameButtons = document.querySelectorAll('.game-button');
+            const skipButton = document.getElementById('skip-challenges');
+            
+            // Add magical sound effects
+            function playMagicalSound() {
+                console.log('✨ Magical sound played!');
+            }
+            
+            // Game card hover effects
+            gameCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 175, 55, 0.3)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.3)';
+                });
+            });
+            
+            // Game button click handlers
+            gameButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.dataset.target;
+                    
+                    playMagicalSound();
+                    
+                    // Add magical transition effect
+                    this.style.transform = 'scale(0.95)';
+                    this.style.boxShadow = '0 0 30px rgba(212, 175, 55, 0.8)';
+                    
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 500);
+                });
+            });
+            
+            // Skip button handler
+            skipButton.addEventListener('click', function() {
+                localStorage.setItem('allChallengesSkipped', 'true');
+                window.location.href = 'invitation.html';
+            });
+            
+            console.log('🎯 Game selection initialized!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Birthday Invitation - Sorting Ceremony</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- House Selection Page -->
+    <div id="house-selection" class="house-selection">
+        <header class="header">
+            <h1 class="title">The Sorting Ceremony</h1>
+            <div class="magical-border"></div>
+        </header>
+
+        <main class="content">
+            <section class="sorting-section">
+                <div class="sorting-hat-container">
+                    <div class="sorting-hat">🎩</div>
+                    <h2>Choose Your House</h2>
+                </div>
+
+                <div class="name-input-section">
+                    <div class="input-container">
+                        <label for="wizard-name">Your Magical Name:</label>
+                        <input type="text" id="wizard-name" placeholder="Enter your name..." required>
+                        <div class="input-glow"></div>
+                    </div>
+                </div>
+
+                <section class="house-section">
+                    <div class="houses">
+                        <div class="house gryffindor" data-house="gryffindor">
+                            <div class="house-crest">🦁</div>
+                            <h3>Gryffindor</h3>
+                            <p>Brave at heart</p>
+                            <div class="house-colors">Scarlet & Gold</div>
+                        </div>
+                        <div class="house hufflepuff" data-house="hufflepuff">
+                            <div class="house-crest">🦡</div>
+                            <h3>Hufflepuff</h3>
+                            <p>Just and loyal</p>
+                            <div class="house-colors">Yellow & Black</div>
+                        </div>
+                        <div class="house ravenclaw" data-house="ravenclaw">
+                            <div class="house-crest">🦅</div>
+                            <h3>Ravenclaw</h3>
+                            <p>Wit beyond measure</p>
+                            <div class="house-colors">Blue & Bronze</div>
+                        </div>
+                        <div class="house slytherin" data-house="slytherin">
+                            <div class="house-crest">🐍</div>
+                            <h3>Slytherin</h3>
+                            <p>Cunning and ambitious</p>
+                            <div class="house-colors">Green & Silver</div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="proceed-section">
+                    <button id="proceed-button" class="proceed-button" disabled>
+                        <span>Proceed to Invitation</span>
+                        <div class="sparkles"></div>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+            <script src="js/script.js"></script>
+            <script src="js/house-selection.js"></script>
+</body>
+</html>

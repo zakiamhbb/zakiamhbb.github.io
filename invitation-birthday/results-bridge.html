@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Birthday Invitation - Results</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Results Bridge Page -->
+    <div id="results-bridge" class="results-bridge">
+        <header class="header">
+            <h1 class="title">Challenge Results</h1>
+            <div class="magical-border"></div>
+        </header>
+
+        <main class="content">
+            <section class="results-section">
+                <div class="results-card">
+                    <div class="results-header">
+                        <h2 id="results-title">Congratulations!</h2>
+                        <div class="wizard-info">
+                            <span id="wizard-name-display"></span>
+                            <div class="house-badge" id="house-badge">
+                                <div class="badge-crest" id="badge-crest"></div>
+                                <div class="badge-text" id="badge-text"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="score-display">
+                        <div class="score-breakdown">
+                            <div class="score-item total">
+                                <span class="score-label">Total Score:</span>
+                                <span class="score-value" id="total-score">0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="score-status" id="score-status">
+                            <!-- Score status will be shown here -->
+                        </div>
+                    </div>
+
+                    <div class="countdown-section">
+                        <div class="countdown-text">Preparing your invitation...</div>
+                        <div class="countdown-timer" id="countdown-timer">5</div>
+                        <div class="countdown-label">seconds</div>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/results-bridge.js"></script>
+</body>
+</html>

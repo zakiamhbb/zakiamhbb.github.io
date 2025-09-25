@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Birthday Invitation - Magical Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Magical Quiz Game Page -->
+    <div id="quiz-game" class="quiz-game">
+        <header class="header">
+            <h1 class="title">Magical Knowledge Test</h1>
+            <div class="magical-border"></div>
+        </header>
+
+        <main class="content">
+            <section class="game-section">
+                <div class="game-intro">
+                    <h2>🧠 Prove Your Magical Knowledge!</h2>
+                    <p>Answer 5 questions correctly to earn your invitation!</p>
+                    <p class="challenge-text">Show you're worthy of attending this magical celebration!</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="question-card" id="question-card">
+                        <div class="question-header">
+                            <div class="question-number" id="question-number">Question 1</div>
+                            <div class="score-display" id="score-display">Score: 0</div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <div class="question-text" id="question-text">Loading...</div>
+                            <div class="question-image" id="question-image">🪄</div>
+                        </div>
+
+                        <div class="options-container" id="options-container">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+
+                        <div class="progress-section">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="progress-text" id="progress-text">0/5 Correct</div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-section" id="feedback-section">
+                        <div class="feedback-content" id="feedback-content"></div>
+                    </div>
+                </div>
+
+                <div class="game-buttons">
+                    <button id="start-quiz" class="game-button">Start Quiz!</button>
+                    <button id="skip-quiz" class="game-button secondary">Skip Challenge</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/quiz-game.js"></script>
+</body>
+</html>

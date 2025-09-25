@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Birthday Invitation - Duel Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Duel Game Page -->
+    <div id="duel-game" class="duel-game">
+        <header class="header">
+            <h1 class="title">Magical Duel Arena</h1>
+            <div class="magical-border"></div>
+        </header>
+
+        <main class="content">
+            <section class="game-section">
+                <div class="game-intro">
+                    <p>Prove your magical prowess by defeating 3 formidable creatures!</p>
+                </div>
+
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Round:</span>
+                        <span id="round-display" class="stat-value">0/3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Player HP:</span>
+                        <span id="player-hp-display" class="stat-value">100</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Score:</span>
+                        <span id="score-display" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <div class="battle-arena">
+                    <div class="player-section">
+                        <div class="character-card">
+                            <div class="character-avatar" id="player-avatar">🧙</div>
+                            <div class="character-name" id="player-name">You</div>
+                            <div class="health-bar">
+                                <div class="health-fill" id="player-health-fill"></div>
+                            </div>
+                            <div class="health-text" id="player-health-text">100/100 HP</div>
+                        </div>
+                    </div>
+
+                    <div class="vs-section">
+                        <div class="vs-text">VS</div>
+                        <div class="battle-effects" id="battle-effects"></div>
+                    </div>
+
+                    <div class="enemy-section">
+                        <div class="character-card enemy-card">
+                            <div class="character-avatar" id="enemy-avatar">🐉</div>
+                            <div class="character-name" id="enemy-name">Dragon</div>
+                            <div class="health-bar">
+                                <div class="health-fill enemy-health" id="enemy-health-fill"></div>
+                            </div>
+                            <div class="health-text" id="enemy-health-text">100/100 HP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <div class="action-buttons" id="action-buttons">
+                        <button class="action-btn attack-btn" id="attack-button">
+                            <span class="action-icon">⚔️</span>
+                            <span class="action-text">Attack</span>
+                        </button>
+                        <button class="action-btn defend-btn" id="defend-button">
+                            <span class="action-icon">🛡️</span>
+                            <span class="action-text">Defend</span>
+                        </button>
+                        <button class="action-btn spell-btn" id="spell-button">
+                            <span class="action-icon">✨</span>
+                            <span class="action-text">Spell</span>
+                        </button>
+                    </div>
+                    <div class="game-message" id="game-message"></div>
+                </div>
+
+                <div class="battle-log" id="battle-log">
+                    <!-- Battle log entries will appear here -->
+                </div>
+
+                <div class="game-buttons">
+                    <button id="start-game" class="game-button">Start Battle!</button>
+                    <button id="surrender-game" class="game-button secondary">I Surrender 😔</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/duel-game.js"></script>
+</body>
+</html>

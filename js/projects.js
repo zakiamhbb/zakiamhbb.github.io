@@ -74,6 +74,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Enabled data-driven decision making",
                 "Implemented at PT. Zona Edukasi Nusantara"
             ]
+        },
+        {
+            title: "Hogwarts Birthday Invitation",
+            description: "Interactive magical birthday invitation with Hogwarts theme.",
+            details: [
+                "Created an immersive Hogwarts-themed birthday invitation experience",
+                "Features magical animations and interactive elements",
+                "Includes floating particles and sparkle effects",
+                "Responsive design with enchanting visual effects"
+            ],
+            externalLink: "invitation-birthday/index.html"
         }
     ];
 
@@ -101,14 +112,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const projectId = e.target.getAttribute('data-project-id');
             const project = projects[projectId];
             
-            modalTitle.textContent = project.title;
-            modalBody.innerHTML = `
-                <ul>
-                    ${project.details.map(detail => `<li>${detail}</li>`).join('')}
-                </ul>
-            `;
-            
-            projectModal.show();
+            // Check if project has an external link
+            if (project.externalLink) {
+                window.location.href = project.externalLink;
+            } else {
+                modalTitle.textContent = project.title;
+                modalBody.innerHTML = `
+                    <ul>
+                        ${project.details.map(detail => `<li>${detail}</li>`).join('')}
+                    </ul>
+                `;
+                
+                projectModal.show();
+            }
         }
     });
 });

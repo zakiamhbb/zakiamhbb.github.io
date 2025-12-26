@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "AI-Powered Autonomous Vehicle Object Detection",
             description: "Developed at LIPI using YOLO detection method for computer vision.",
+            image: "images/project/autonomous-vehicle/Autonomus Vehicle Project.jpg",
             details: [
                 "Achieved 96.7% accuracy in object detection for autonomous vehicles",
                 "Enhanced safety and efficiency of self-driving cars",
@@ -28,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "Line Follower Robot for Gate Tour",
             description: "Improved Mbot from Makeblock for gate tour functionality.",
+            image: "images/project/japan/1629956768073.jpg",
+            images: [
+                "images/project/japan/1629956768073.jpg",
+                "images/project/japan/1629956771623.jpg",
+                "images/project/japan/1629956792527.jpg",
+                "images/project/japan/1629956793178.jpg"
+            ],
             details: [
                 "Developed during International Hackathon in Kitakyushu, Japan",
                 "Enhanced Mbot capabilities for autonomous navigation",
@@ -91,8 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function createProjectCard(project) {
         const card = document.createElement('div');
         card.className = 'col-md-4 mb-4';
+        
+        const imageHTML = project.image ? `
+            <img src="${project.image}" alt="${project.title}" class="card-img-top project-image" style="height: 200px; object-fit: cover; border-radius: 10px 10px 0 0;">
+        ` : '';
+        
         card.innerHTML = `
-            <div class="card h-100">
+            <div class="card h-100 project-card">
+                ${imageHTML}
                 <div class="card-body">
                     <h5 class="card-title">${project.title}</h5>
                     <p class="card-text">${project.description}</p>
@@ -117,7 +131,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = project.externalLink;
             } else {
                 modalTitle.textContent = project.title;
+                
+                let imagesHTML = '';
+                if (project.images && project.images.length > 0) {
+                    imagesHTML = `
+                        <div class="project-images mb-4">
+                            <div class="row g-2">
+                                ${project.images.map(img => `
+                                    <div class="col-6 col-md-3">
+                                        <img src="${img}" alt="${project.title}" class="img-fluid project-modal-image" style="cursor: pointer; border-radius: 8px;" onclick="openImageModal('${img}', '${project.title}')">
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                } else if (project.image) {
+                    imagesHTML = `
+                        <div class="project-image mb-4 text-center">
+                            <img src="${project.image}" alt="${project.title}" class="img-fluid project-modal-image" style="max-height: 400px; border-radius: 8px; cursor: pointer;" onclick="openImageModal('${project.image}', '${project.title}')">
+                        </div>
+                    `;
+                }
+                
                 modalBody.innerHTML = `
+                    ${imagesHTML}
                     <ul>
                         ${project.details.map(detail => `<li>${detail}</li>`).join('')}
                     </ul>
@@ -127,4 +164,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Smooth scroll for scroll indicator
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            const projectsContent = document.getElementById('projects-content');
+            if (projectsContent) {
+                projectsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });
+
+// Function to open image modal
+function openImageModal(imageSrc, title) {
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+        <div class="image-modal-content">
+            <span class="image-modal-close">&times;</span>
+            <h4 class="image-modal-title">${title}</h4>
+            <img src="${imageSrc}" alt="${title}" class="image-modal-img">
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.style.display = 'flex';
+    
+    modal.querySelector('.image-modal-close').addEventListener('click', () => {
+        modal.remove();
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+}

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     const hero = document.querySelector('.hero');
 
+    // For pages with hero section (like index.html), handle scroll-based navbar styling
     if (navbar && hero) {
         function updateNavbar() {
             const heroBottom = hero.offsetTop + hero.offsetHeight;
@@ -20,6 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update navbar style on scroll
         window.addEventListener('scroll', updateNavbar);
+    } 
+    // For pages without hero section, ensure navbar is colored
+    else if (navbar && !hero) {
+        // Ensure navbar has consistent styling on non-hero pages
+        if (!navbar.classList.contains('navbar-transparent') && !navbar.classList.contains('navbar-colored')) {
+            navbar.classList.add('navbar-colored');
+        }
     }
 });
 

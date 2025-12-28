@@ -1,36 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Light Theme (Default) */
-:root {
-    --primary-color: #243642;
-    --secondary-color: #387478;
-    --accent-color: #629584;
-    --background-color: #E2F1E7;
-    --text-color: #243642;
-    --card-bg: rgba(255, 255, 255, 0.1);
-    --card-border: rgba(255, 255, 255, 0.2);
-    --section-bg: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
-    --timeline-bg: #f8f9fa;
-    --timeline-line: #2c3251;
-    --timeline-dot: #738ea6;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Dark Theme */
-[data-theme="dark"] {
-    --primary-color: #E2F1E7;
-    --secondary-color: #A8D5BA;
-    --accent-color: #629584;
-    --background-color: #1a1a2e;
-    --text-color: #E2F1E7;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --section-bg: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.3));
-    --timeline-bg: #16213e;
-    --timeline-line: #A8D5BA;
-    --timeline-dot: #629584;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-}
+/* Color variables are now defined in color.css */
 
 * {
     margin: 0;
@@ -63,11 +33,11 @@ body {
 }
 
 [data-theme="dark"] body {
-    background: linear-gradient(135deg, var(--background-color), #0f0f1e);
+    background: linear-gradient(135deg, var(--background-color), var(--background-color));
 }
 
 [data-theme="dark"] .text-muted {
-    color: #A8D5BA !important;
+    color: var(--text-color) !important;
     opacity: 0.8;
 }
 
@@ -152,11 +122,12 @@ body {
     background-color: var(--timeline-bg);
     border-color: var(--accent-color);
     color: var(--text-color);
-    box-shadow: 0 0 0 0.2rem rgba(98, 149, 132, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--shadow-color);
 }
 
 [data-theme="dark"] .form-control::placeholder {
-    color: rgba(226, 241, 231, 0.5);
+    color: var(--text-color);
+    opacity: 0.5;
 }
 
 [data-theme="dark"] .contact-info {
@@ -431,7 +402,7 @@ body {
 
 .input-wrapper .form-control:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 0.2rem rgba(98, 149, 132, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--shadow-color);
 }
 
 .input-wrapper textarea.form-control {
@@ -786,7 +757,7 @@ body {
     position: absolute;
     top: -40px;
     right: 0;
-    color: #fff;
+    color: var(--background-color);
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -799,7 +770,7 @@ body {
 }
 
 .image-modal-title {
-    color: #fff;
+    color: var(--background-color);
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
@@ -809,6 +780,156 @@ body {
     max-height: 80vh;
     border-radius: 10px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Detail Page Styles */
+#project-detail-content {
+    min-height: calc(100vh - 200px);
+    scroll-margin-top: 100px;
+}
+
+.project-back-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.project-back-link:hover {
+    color: var(--accent-color);
+    transform: translateX(-5px);
+}
+
+.project-detail-article {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project-detail-header {
+    margin-bottom: 3rem;
+}
+
+.project-detail-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-top: 0;
+    letter-spacing: -0.02em;
+}
+
+.project-detail-description {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.project-detail-image {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.project-detail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-detail-image img:hover {
+    transform: scale(1.01);
+}
+
+.project-detail-content {
+    margin-top: 3rem;
+}
+
+.project-detail-paragraph {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.project-detail-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.project-detail-features {
+    margin-top: 4rem;
+}
+
+.project-detail-section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.project-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project-detail-item {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    color: var(--text-color);
+    padding: 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-detail-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.see-details-btn {
+    transition: all 0.3s ease;
+}
+
+.see-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+    .project-detail-header {
+        margin-bottom: 2rem;
+    }
+    
+    .project-detail-image {
+        margin: 2rem 0;
+    }
+    
+    .project-detail-content {
+        margin-top: 3rem;
+    }
+    
+    .project-detail-list {
+        gap: 1rem;
+    }
+    
+    .project-detail-item {
+        padding-left: 1.25rem;
+    }
 }
 
 /* Modern Card Enhancements */
@@ -1098,7 +1219,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    color: #ffffff;
+    color: var(--background-color);
     text-shadow: 0.2vh 0.2vh 0.4vh rgba(0,0,0,0.5);
 }
 
@@ -1157,7 +1278,7 @@ body {
 }
 
 [data-theme="dark"] .highlight-name {
-    background: linear-gradient(135deg, #A8D5BA, var(--accent-color));
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1450,7 +1571,7 @@ h2::after {
     transform: translateX(-50%);
     z-index: 1;
     border-radius: 2px;
-    box-shadow: 0 0 10px rgba(98, 149, 132, 0.3);
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
 .section-header {
@@ -1500,7 +1621,7 @@ h2::after {
     background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
     border-radius: 12px;
     padding: 25px 30px;
-    box-shadow: 0 8px 25px rgba(98, 149, 132, 0.25);
+    box-shadow: 0 8px 25px var(--shadow-color);
     position: relative;
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     cursor: pointer;
@@ -1509,7 +1630,7 @@ h2::after {
 
 .timeline-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(98, 149, 132, 0.35);
+    box-shadow: 0 15px 40px var(--shadow-color);
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
 }
 
@@ -1563,7 +1684,7 @@ h2::after {
 
 .timeline-item-wrapper:hover::after {
     transform: translateY(-50%) scale(1.15);
-    box-shadow: 0 6px 25px rgba(98, 149, 132, 0.4);
+    box-shadow: 0 6px 25px var(--shadow-color);
     border-color: var(--secondary-color);
 }
 
@@ -1579,7 +1700,7 @@ h2::after {
 .timeline-company {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--background-color);
     margin-bottom: 8px;
     transition: transform 0.3s ease;
 }
@@ -1595,14 +1716,14 @@ h2::after {
 .timeline-role {
     font-size: 1rem;
     font-weight: 500;
-    color: #ffffff;
+    color: var(--background-color);
     margin-bottom: 8px;
     opacity: 0.95;
 }
 
 .timeline-date {
     font-size: 0.9rem;
-    color: #ffffff;
+    color: var(--background-color);
     margin-bottom: 5px;
     opacity: 0.9;
     font-weight: 400;
@@ -1610,7 +1731,7 @@ h2::after {
 
 .timeline-location {
     font-size: 0.85rem;
-    color: #ffffff;
+    color: var(--background-color);
     opacity: 0.8;
     font-weight: 300;
 }
@@ -2167,6 +2288,7 @@ h2::after {
 #contact-content {
     background-color: var(--background-color);
     padding: 60px 0;
+    padding-top: 120px !important;
 }
 
 @media (max-width: 768px) {

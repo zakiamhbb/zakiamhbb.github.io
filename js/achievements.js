@@ -21,26 +21,38 @@ document.addEventListener('DOMContentLoaded', () => {
         achievementElement.classList.add('col-md-6', 'col-lg-4', 'mb-4', 'fade-in');
         achievementElement.style.animationDelay = `${index * 0.1}s`;
         
-        const imageHTML = achievement.image ? `
-            <div class="achievement-image-wrapper mb-3">
-                <img src="${achievement.image}" alt="${achievement.title}" class="achievement-image" onclick="openImageModal('${achievement.image}', '${achievement.title}')">
-            </div>
-        ` : `
+        const iconHTML = `
             <div class="achievement-icon-box mb-3">
                 <i class="bi ${achievement.icon}"></i>
             </div>
         `;
         
         const yearHTML = achievement.year ? `<span class="achievement-year">${achievement.year}</span>` : '';
+        const seeDetailsButton = achievement.image ? `
+            <button class="btn btn-primary mt-3 see-details-btn" data-image="${achievement.image}" data-title="${achievement.title.replace(/"/g, '&quot;')}">
+                <i class="bi bi-eye me-2"></i>See Details
+            </button>
+        ` : '';
         
         achievementElement.innerHTML = `
             <div class="achievement-card h-100 text-center">
-                ${imageHTML}
+                ${iconHTML}
                 <h5 class="card-title">${achievement.title}</h5>
                 ${yearHTML}
+                ${seeDetailsButton}
             </div>
         `;
         achievementContainer.appendChild(achievementElement);
+    });
+    
+    // Add event listeners for "See Details" buttons
+    achievementContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('see-details-btn') || e.target.closest('.see-details-btn')) {
+            const button = e.target.classList.contains('see-details-btn') ? e.target : e.target.closest('.see-details-btn');
+            const imageSrc = button.getAttribute('data-image');
+            const title = button.getAttribute('data-title');
+            openImageModal(imageSrc, title);
+        }
     });
 
     // Smooth scroll for scroll indicator

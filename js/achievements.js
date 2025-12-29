@@ -1,17 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const achievements = [
-        { title: "Bronze of International Festival Innovation on Green Technology (I-FINOG)", year: 2019, icon: "bi-trophy", image: "images/achievements/bronze-medal-ifinog-2019.jpg" },
-        { title: "Awardee of Kontes Robot Indonesia (KRI) KRTMI", year: 2020, icon: "bi-award", image: "images/achievements/certificate-zakia-mahbub-abdullah.jpg" },
+        { 
+            title: "Magang Merdeka Batch 2 - Data Analyst, PT. Zona Edukasi Nusantara", 
+            year: 2022, 
+            icon: "bi-award", 
+            image: [
+                "images/achievements/sertifikat-km-batch-2.jpg",
+                "images/achievements/sk-penilaian-176.jpg"
+            ]
+        },
+        { title: "Cross Culture Program 2021", year: 2021, icon: "bi-award", image: "images/achievements/certificate-zakia-mahbub-abdullah.jpg" },
+        { title: "Awardee of Kontes Robot Indonesia (KRI) KRTMI", year: 2020, icon: "bi-award", image: "images/achievements/KRTMI.png" },
+        { title: "Peraih Pendanaan - PKM 5 Bidang 2020", year: 2020, icon: "bi-trophy", image: "images/achievements/pkm-5-bidang-2020-ketua-kelompok.jpg" },
+        { title: "Asian University, Taiwan - Online Learning Exchange Program, Fintech", year: 2020, icon: "bi-file-earmark-text", image: "images/achievements/transkip-fintech.jpg" },
+        { title: "Asian University, Taiwan - Online Learning Exchange Program, Artificial Intelligence", year: 2020, icon: "bi-file-earmark-text", image: "images/achievements/transkip.jpg" },
+        { title: "Bronze of International Festival Innovation on Green Technology (I-FINOG), Malaysia", year: 2019, icon: "bi-trophy", image: "images/achievements/bronze-medal-ifinog-2019.jpg" },
+        { title: "International Ideathon Hackathon for Training Next Generation Engineers, Japan", year: 2019, icon: "bi-award", image: "images/achievements/sertifikat-ideathon-hackathon.jpg" },
         { title: "Semifinalists of National Software Development Competition Luxtrum XI DTETI Gadjah Mada University", year: 2018, icon: "bi-laptop", image: "images/achievements/sertifikat-semifinalis-nsdc.jpg" },
-        { title: "2nd Runner Up in the Creative Robot Category, Robotic Day", year: 2017, icon: "bi-robot", image: "images/achievements/sertifikat-irg-robotik.jpg" },
-        { title: "2nd Runner Up in the Creative Robot category, International Robotic Games", year: 2016, icon: "bi-globe", image: "images/achievements/sertifikat-irg-robotik.jpg" },
-        { title: "PKM 5 Bidang 2020 - Ketua Kelompok", year: 2020, icon: "bi-trophy", image: "images/achievements/pkm-5-bidang-2020-ketua-kelompok.jpg" },
-        { title: "Ideathon Hackathon Certificate", year: null, icon: "bi-award", image: "images/achievements/sertifikat-ideathon-hackathon.jpg" },
-        { title: "KM Batch 2 Certificate", year: null, icon: "bi-award", image: "images/achievements/sertifikat-km-batch-2.jpg" },
-        { title: "SK Penilaian 176", year: null, icon: "bi-file-earmark-text", image: "images/achievements/sk-penilaian-176.jpg" },
-        { title: "Fintech Transcript", year: null, icon: "bi-file-earmark-text", image: "images/achievements/transkip-fintech.jpg" },
-        { title: "Academic Transcript", year: null, icon: "bi-file-earmark-text", image: "images/achievements/transkip.jpg" },
-        { title: "Certificate of Achievement", year: null, icon: "bi-award", image: "images/organizations/certificate-zakia-mahbub.jpg" }
+        { title: "2nd Runner Up in the Creative Robot Category, Robotic Day", year: 2017, icon: "bi-robot" },
+        { title: "2nd Runner Up in the Creative Robot category, International Robotic Games", year: 2016, icon: "bi-globe", image: "images/achievements/sertifikat-irg-robotik.jpg" }
     ];
 
     const achievementContainer = document.getElementById('achievement-container');

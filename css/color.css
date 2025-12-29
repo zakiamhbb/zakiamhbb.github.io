@@ -1,0 +1,53 @@
+/* Color Variables - White and Black Theme */
+:root {
+    /* Primary Colors */
+    --primary-color: #000000;
+    --secondary-color: #000000;
+    --accent-color: #000000;
+    
+    /* Background Colors */
+    --background-color: #ffffff;
+    --text-color: #000000;
+    
+    /* Card Colors */
+    --card-bg: #ffffff;
+    --card-border: #000000;
+    --section-bg: #ffffff;
+    
+    /* Timeline Colors */
+    --timeline-bg: #ffffff;
+    --timeline-line: #000000;
+    --timeline-dot: #000000;
+    
+    /* Shadow Colors */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme - Inverted White and Black */
+[data-theme="dark"] {
+    /* Primary Colors */
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --accent-color: #ffffff;
+    
+    /* Background Colors */
+    --background-color: #000000;
+    --text-color: #ffffff;
+    
+    /* Card Colors */
+    --card-bg: #000000;
+    --card-border: #ffffff;
+    --section-bg: #000000;
+    
+    /* Timeline Colors */
+    --timeline-bg: #000000;
+    --timeline-line: #ffffff;
+    --timeline-dot: #ffffff;
+    
+    /* Shadow Colors */
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+

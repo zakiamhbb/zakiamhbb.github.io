@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Profile animation
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(400, 400);
-    document.getElementById('profile-animation').appendChild(renderer.domElement);
+    const profileAnimation = document.getElementById('profile-animation');
+    if (profileAnimation && typeof THREE !== 'undefined') {
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(400, 400);
+        profileAnimation.appendChild(renderer.domElement);
 
     const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
     const material = new THREE.MeshBasicMaterial({ color: 0x1a237e, wireframe: true });

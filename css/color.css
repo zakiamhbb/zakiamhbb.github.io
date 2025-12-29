@@ -10,9 +10,9 @@
     --text-color: #000000;
     
     /* Card Colors */
-    --card-bg: rgba(255, 255, 255, 0.1);
-    --card-border: rgba(0, 0, 0, 0.2);
-    --section-bg: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    --card-bg: #ffffff;
+    --card-border: #000000;
+    --section-bg: #ffffff;
     
     /* Timeline Colors */
     --timeline-bg: #ffffff;
@@ -35,9 +35,9 @@
     --text-color: #ffffff;
     
     /* Card Colors */
-    --card-bg: rgba(0, 0, 0, 0.05);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --section-bg: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+    --card-bg: #000000;
+    --card-border: #ffffff;
+    --section-bg: #000000;
     
     /* Timeline Colors */
     --timeline-bg: #000000;
@@ -45,7 +45,7 @@
     --timeline-dot: #ffffff;
     
     /* Shadow Colors */
-    --shadow-color: rgba(255, 255, 255, 0.3);
+    --shadow-color: rgba(255, 255, 255, 0.1);
 }
 
 

@@ -23,7 +23,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: linear-gradient(135deg, var(--background-color), var(--background-color));
+    background-color: var(--background-color);
     font-size: 16px;
     position: relative;
     margin: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 [data-theme="dark"] body {
-    background: linear-gradient(135deg, var(--background-color), var(--background-color));
+    background-color: var(--background-color);
 }
 
 [data-theme="dark"] .text-muted {
@@ -294,7 +294,6 @@ body {
 /* Contact Page Enhancements */
 .contact-info-card {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
     border-radius: 20px;
     padding: 40px;
@@ -367,7 +366,6 @@ body {
 
 .contact-form-card {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
     border-radius: 20px;
     padding: 40px;
@@ -418,7 +416,6 @@ body {
 /* About Page Enhancements */
 .about-content-wrapper {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
     border-radius: 30px;
     padding: 60px 40px;
@@ -1349,7 +1346,6 @@ body {
 section {
     padding: 60px 0;
     background: var(--section-bg);
-    backdrop-filter: blur(10px);
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -1501,7 +1497,6 @@ h2::after {
 
 .card {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
     border-radius: 15px;
     padding: 20px;
@@ -1947,7 +1942,6 @@ h2::after {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
     position: relative;
-    backdrop-filter: blur(10px);
 }
 
 .project-card::before,
@@ -2045,7 +2039,6 @@ h2::after {
 
 .education-card {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -2304,8 +2297,17 @@ h2::after {
     transition: background 0.3s ease;
 }
 
+/* Override Bootstrap bg-light for theme support */
+.bg-light {
+    background-color: var(--background-color) !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--background-color) !important;
+}
+
 footer {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: var(--background-color);
     padding: 30px 0;
     text-align: center;
